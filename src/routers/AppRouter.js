@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Hero } from '../components/hero/HeroScreen'
+import { Hero } from '../components/heroes/HeroScreen'
 import { LoginScreen } from '../components/login/LoginScreen'
 import { DashboardRoutes } from './DashboardRoutes'
 
