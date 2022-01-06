@@ -10,7 +10,7 @@ export const HeroList = ({ publisher }) => {
         <>
             <h1>Heroes List - {publisher}</h1>
             <hr />
-            <div className='row rows-cols-1 row-cols-md-3 g-3'>
+            <div className='row rows-cols-1 row-cols-md-3 g-3 animate__animated animate__fadeIn'>
                 {
                     heroes.map(hero => (
                         <HeroCard
