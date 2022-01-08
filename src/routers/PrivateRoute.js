@@ -1,9 +1,15 @@
-import { useContext } from 'react'
-import { Navigate } from 'react-router-dom'
+import { useContext, useEffect } from 'react'
+import { Navigate, useLocation } from 'react-router-dom'
 import { AuthContext } from '../auth/authContext'
 
 export const PrivateRoute = ({ children }) => {
-    const { user } = useContext(AuthContext)
+    const { pathname, search } = useLocation();
+    const { user } = useContext(AuthContext);
+
+    useEffect(() => {
+        if (!pathname) return;
+        localStorage.setItem('lastPath', `${pathname}${search}`);
+    }, [pathname, search])
 
     return user.logged
         ? children
