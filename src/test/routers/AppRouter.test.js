@@ -34,11 +34,9 @@ describe('Tests on <AppRouter />', () => {
                 <AppRouter />
             </AuthContext.Provider>
         );
-        const navbarExist = wrapper.find('.navbar').exists(); 
-        
+        const navbarExist = wrapper.find('.navbar').exists();
+
         expect(wrapper).toMatchSnapshot();
         expect(navbarExist).toBeTruthy();
     });
-
-
 });
